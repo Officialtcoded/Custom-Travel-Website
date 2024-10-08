@@ -19,6 +19,11 @@ html{
     height: 100vh;
 }
 
+.black{
+    background-color: rgba(0, 0, 0, 0.212);
+    height: 100vh;
+}
+
 #hero-section header{
     display: flex;
     justify-content: space-around;
