@@ -29,6 +29,7 @@ html{
     justify-content: space-around;
     align-items: center;
     gap: 10rem;
+    position: relative; 
 }
 
 #hero-section header .logo{
@@ -45,13 +46,13 @@ html{
     display: flex;
 }
 
-#hero-section header .menu ul{
+.nav-link{
     list-style-type: none;
     display: flex;
     gap: 5rem;
 }
 
-#hero-section header .menu ul li a{
+.nav-link li a{
     color: black;
     text-decoration: none;
     font-size: 2.2rem;
@@ -612,25 +613,32 @@ footer p{
         display: flex;
     }
     
-    #hero-section header .menu ul{
-        list-style-type: none;
-        gap: 2rem;
-        position: absolute;
-        top: 13%;
-        width: 100%;
+    .nav-link{
+        display: none; 
         flex-direction: column;
+        position: absolute; 
+        backdrop-filter: blur(4px);
+        text-align: center;
+        width: 100%;
+        left: 0; 
+        top: 70px; 
+        padding: 4rem 0;
+        z-index: 10; 
+        border: none; 
+        box-shadow: 0 0px px rgba(0, 0, 0, 0.1); 
+        transition: max-height 0.3s ease; 
+        overflow: hidden;
+        gap: 2rem;
     }
 
-    #hero-section header .menu ul li{
+    .nav-link.active{
+        display: flex;
+    }
+
+    .nav-link li{
         padding-bottom: 1rem;
     }
 
-    .hide{
-        display: none !important;
-    }
-    .show{
-        display: block !important;
-    }
     
    
     span.burger a {
